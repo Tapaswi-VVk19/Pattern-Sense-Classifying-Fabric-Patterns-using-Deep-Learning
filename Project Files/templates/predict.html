@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pattern Prediction</title></head>
+<body>
+  <h1>Upload Fabric Pattern Image</h1>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if prediction %}
+    <h2>Prediction:</h2>
+    <p>{{ prediction }}</p>
+    <img src="{{ img_path }}" width="300">
+  {% endif %}
+</body>
+</html>
